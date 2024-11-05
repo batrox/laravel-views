@@ -6,9 +6,10 @@ use Illuminate\Support\Str;
 
 class BaseFilter
 {
-    protected $title;
+    public $title;
     public $defaultValue;
     public $id;
+    public $type;
 
     public function __construct()
     {
