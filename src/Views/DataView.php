@@ -30,7 +30,7 @@ abstract class DataView extends View
     public $total = 0;
 
     /** @var String $query Current query string with the search value */
-    public $query;
+//    public $query;
 
     /** @var String $filters Current query string with the filters value */
     public $filters = [];
@@ -41,6 +41,8 @@ abstract class DataView extends View
     /** @var Array<String> $searchBy All fields to search */
     public $searchBy;
 
+    public $search;
+
     public $sortBy = null;
 
     public $sortOrder = 'asc';
@@ -48,10 +50,10 @@ abstract class DataView extends View
     public $selected = [];
     public $allSelected = false;
 
-    public function hydrate()
-    {
-        $this->filtersViews = $this->filters();
-    }
+//    public function hydrate()
+//    {
+//        $this->filtersViews = $this->filters();
+//    }
 
     public function mount(QueryStringData $queryStringData)
     {
