@@ -19,6 +19,4 @@
       {!! $component !!}
     </div>
   @endforeach
-
-  @include('laravel-views::components.confirmation-message')
 </x-lv-layout>
