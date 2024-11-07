@@ -8,20 +8,17 @@ try {
   document.addEventListener("DOMContentLoaded", () => {
     setUpUiLibraries()
 
-    Livewire.hook('commit', ({ component, commit, respond, succeed, fail }) => {
-      // Equivalent of 'message.sent'
-
-      succeed(({ snapshot, effect }) => {
-        // Equivalent of 'message.received'
-
+    Livewire.hook('morph.updated',  ({ el, component }) => {
         queueMicrotask(() => {
           // Equivalent of 'message.processed'
           setUpUiLibraries()
         })
-      })
+    })
 
-      fail(() => {
-        // Equivalent of 'message.failed'
+    Livewire.hook('morph.added',  ({ el, component }) => {
+      queueMicrotask(() => {
+        // Equivalent of 'message.processed'
+        setUpUiLibraries()
       })
     })
   })
