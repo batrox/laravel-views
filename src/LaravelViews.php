@@ -34,7 +34,6 @@ class LaravelViews
             'form.checkbox' => 'checkbox',
             'form.input' => 'input',
             'tooltip' => 'tooltip',
-            'confirmation-message' => 'confirmation-message',
             'loading' => 'loading'
         ];
     }
