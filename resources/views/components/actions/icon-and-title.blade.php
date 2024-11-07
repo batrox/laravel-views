@@ -5,7 +5,7 @@
     <button
       wire:click.prevent="{{ $model ? "executeAction('{$action->id}','{$model->getKey()}')" : "executeBulkAction('{$action->id}')" }}"
       @if ($action->shouldBeConfirmed())
-          wire:confirm="{{ $action->getConfirmationMessage($model ? $this->getModelWhoFiredAction($model->getId()) : null) }}"
+          wire:confirm="{{ $action->getConfirmationMessage($model ? $this->getModelWhoFiredAction($model->getKey()) : null) }}"
       @endif
       title="{{ $action->title}}"
       class="group flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full focus:outline-none"
